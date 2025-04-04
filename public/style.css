@@ -1,0 +1,279 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #fff;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    color: #4a148c; /* Deep purple */
+    margin-bottom: 25px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #7b1fa2; /* Medium purple */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e1bee7; /* Light purple */
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* Nickname Section */
+#nickname-section input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-right: 10px;
+    width: 60%;
+    max-width: 300px;
+}
+
+#nickname-section button {
+    padding: 12px 25px;
+    background-color: #5e35b1; /* Deep purple variant */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#nickname-section button:hover {
+    background-color: #4527a0; /* Darker purple */
+}
+
+/* Game Section */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e1f5fe; /* Light blue */
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+#status-message { color: #0277bd; /* Medium blue */}
+#player-info { color: #6a1b9a; /* Purple */}
+#player-nickname, #player-score { font-weight: bold; }
+
+
+/* Question Area */
+#question-area { background-color: #fff3e0; /* Light orange */ border-color: #ffe0b2; }
+#emojis-display {
+    font-size: 3.5em; /* Make emojis large */
+    margin: 20px 0;
+    letter-spacing: 10px; /* Space out emojis */
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#timer-display {
+    font-size: 1.1em;
+    color: #d84315; /* Deep orange */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+#timer-value { display: inline-block; width: 25px; text-align: center; }
+
+.answer-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#answer-input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+#submit-answer-button {
+    padding: 10px 20px;
+    background-color: #00796b; /* Teal */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#submit-answer-button:hover {
+    background-color: #004d40; /* Darker teal */
+}
+#submit-answer-button:disabled {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+}
+
+/* Reveal Area */
+#reveal-area { background-color: #e8f5e9; /* Light green */ border-color: #c8e6c9; }
+#correct-answer-display { color: #2e7d32; /* Dark green */ }
+#round-scores-list {
+    list-style: none;
+    padding: 0;
+    max-height: 100px;
+    overflow-y: auto;
+    text-align: left;
+    display: inline-block;
+}
+#round-scores-list li { margin-bottom: 5px; color: #555; }
+
+
+/* Panels Layout */
+.game-panels {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between panels */
+    margin-top: 30px;
+}
+
+.panel {
+    flex: 1; /* Each panel takes equal space */
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.panel h2 { margin-top: 0; font-size: 1.2em;}
+
+/* Leaderboard */
+#leaderboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#leaderboard-list li {
+    padding: 8px 5px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+#leaderboard-list li:last-child { border-bottom: none; }
+#leaderboard-list li .score { font-weight: bold; color: #c2185b; /* Pink */ }
+
+/* Chat */
+#chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fdfdfd;
+    text-align: left;
+    max-height: 200px; /* Limit height */
+}
+
+#chat-messages p {
+    margin: 0 0 8px 0;
+    word-wrap: break-word;
+}
+.chat-nickname { font-weight: bold; color: #1976d2; /* Blue */ }
+.chat-self .chat-nickname { color: #7b1fa2; /* Purple for self */}
+.system-message { font-style: italic; color: #757575; }
+
+.chat-input {
+    display: flex;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 0.9em;
+}
+
+#send-chat-button {
+    padding: 8px 15px;
+    background-color: #1976d2; /* Blue */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+#send-chat-button:hover {
+    background-color: #115293; /* Darker blue */
+}
+
+/* Utility Classes */
+.hidden { display: none !important; }
+.error-text { color: #d32f2f; font-size: 0.9em; margin-top: 10px; }
+.feedback-text { margin-top: 10px; font-weight: bold; min-height: 1.2em; } /* Reserve space */
+.feedback-correct { color: #388e3c; /* Green */ }
+.feedback-incorrect { color: #d32f2f; /* Red */ }
+
+.player-count {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container { padding: 20px; }
+    h1 { font-size: 2em; }
+    .game-panels { flex-direction: column; } /* Stack panels vertically */
+    .panel { min-height: 200px; }
+    #emojis-display { font-size: 2.8em; letter-spacing: 8px; }
+    .answer-input { flex-direction: column; }
+    #answer-input { border-radius: 5px; margin-bottom: 5px; width: 90%; }
+    #submit-answer-button { border-radius: 5px; width: auto; }
+    #nickname-section input[type="text"] { width: 80%; margin-bottom: 10px; }
+    .game-info { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+     h1 { font-size: 1.8em; }
+    #emojis-display { font-size: 2.2em; letter-spacing: 5px; }
+    .container { padding: 15px; }
+     #nickname-section button, #submit-answer-button, #send-chat-button { padding: 10px 15px; }
+}

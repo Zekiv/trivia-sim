@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Trivia Challenge!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Emoji Trivia Challenge! 📺</h1>
+
+        <!-- Nickname Setup -->
+        <div id="nickname-section" class="section">
+            <h2>Enter Your Nickname</h2>
+            <input type="text" id="nickname-input" placeholder="Your awesome nickname" maxlength="15">
+            <button id="join-button">Join Game</button>
+            <p id="error-message" class="error-text"></p>
+        </div>
+
+        <!-- Main Game Area -->
+        <div id="game-section" class="section hidden">
+            <div class="game-info">
+                <div id="status-message">Waiting for players...</div>
+                <div id="player-info">
+                    Welcome, <span id="player-nickname"></span>! | Score: <span id="player-score">0</span>
+                </div>
+            </div>
+
+            <div id="question-area" class="hidden">
+                <h2>Guess the Movie/Show:</h2>
+                <div id="emojis-display">❓❓❓</div>
+                <div id="timer-display">Time left: <span id="timer-value">--</span>s</div>
+                <div class="answer-input">
+                    <input type="text" id="answer-input" placeholder="Type your answer here">
+                    <button id="submit-answer-button">Submit</button>
+                </div>
+                <p id="answer-feedback" class="feedback-text"></p>
+            </div>
+
+            <div id="reveal-area" class="hidden">
+                <h2>Round Over!</h2>
+                <p>The correct answer was: <strong id="correct-answer-display"></strong></p>
+                <h3>Scores this round:</h3>
+                <ul id="round-scores-list">
+                    <li>No scores yet...</li>
+                </ul>
+            </div>
+
+            <div class="game-panels">
+                <!-- Leaderboard -->
+                <div id="leaderboard-section" class="panel">
+                    <h2>🏆 Leaderboard</h2>
+                    <ul id="leaderboard-list">
+                        <li>Waiting for players...</li>
+                    </ul>
+                </div>
+
+                <!-- Chat -->
+                <div id="chat-section" class="panel">
+                    <h2>💬 Chat</h2>
+                    <div id="chat-messages">
+                        <p class="system-message">Welcome to the chat!</p>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chat-input" placeholder="Say something nice..." maxlength="100">
+                        <button id="send-chat-button">Send</button>
+                    </div>
+                </div>
+            </div>
+             <p class="player-count">Players Online: <span id="player-count-value">0</span></p>
+        </div>
+
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>
